@@ -97,16 +97,16 @@ window.onkeyup = function (e) {
 // method to move player on the canvas
 function movePlayer() {
 
-    if (keyboard['ArrowLeft'] || keyboard['Q']) {
+    if (keyboard['ArrowLeft']) {
         socket.emit('move left');
     }
-    if (keyboard['ArrowUp'] || keyboard['Z']) {
+    if (keyboard['ArrowUp']) {
         socket.emit('move up');
     }
-    if (keyboard['ArrowRight'] || keyboard['D']) {
+    if (keyboard['ArrowRight']) {
         socket.emit('move right');
     }
-    if (keyboard['ArrowDown'] || keyboard['S']) {
+    if (keyboard['ArrowDown']) {
         socket.emit('move down');
     }
 
