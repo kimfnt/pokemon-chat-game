@@ -1,0 +1,434 @@
+/* Pages */
+  
+.pages {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+  
+.page {
+  height: 100%;
+  position: absolute;
+  width: 100%;    
+  overflow: auto;
+}
+
+/* Login Page */
+
+.login.page {
+  background-color: #000;
+}
+
+.login.page .form {
+  height: 100px;
+  margin-top: -100px;
+  position: absolute;  
+  text-align: center;
+  top: 30%;
+  width: 100%;
+}
+
+.login.page .form .usernameInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 400px;
+}
+  
+.login.page .title {
+  font-size: 200%;
+}
+
+.login.page .usernameInput {
+  font-size: 200%;
+  letter-spacing: 3px;
+}
+
+.login.page .title, .login.page .usernameInput {
+  color: #fff;
+  font-weight: 100;
+}
+
+/* Chat page */
+
+.game.page {
+  display: none;
+  background-color: #707080;
+}
+
+h3 {
+  font-size: 24px;
+  color: black;
+  text-align: center;
+}
+
+/* Main Game Zone */
+#map{
+  position: absolute;
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  padding: 0;
+  top: 0;  
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+canvas{
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    border: 5px solid rgb(63, 71, 71);
+    top: 0;
+    left: 0;
+}
+
+#disconnectbtn{
+  position: absolute;
+  border: none;
+  background: none;
+  top: 10px;
+  right: 208px;
+}
+
+/* Chat box */
+.chat-container{
+  position: absolute;
+  width: 200px;
+  height: 600px;
+  right:0;
+  top:0;
+  border-style: solid solid solid none;
+  border-width: 5px;
+  border-color: rgb(63, 71, 71);
+  background-color: rgb(190, 207, 207);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.chat-container.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#chat-name{
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+#closebtn{
+  position: absolute;
+  border: none;
+  background: none;
+  top: 2px;
+  right: 2px;
+}
+.messages {
+  position: absolute;
+  top: 25px;
+  font-size: 14px;
+  list-style-type: none;
+  overflow-y: auto;
+  height: 545px;
+  width: 195px;
+}
+
+.inputMessage {
+  position: absolute;
+  bottom: -1px;
+  width: 196px;
+}
+
+/* Yes/No Prompt to Chat */
+
+.cd-popup {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(94, 110, 141, 0.9);
+  opacity: 0;
+  visibility: hidden;
+}
+.cd-popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cd-popup-container {
+  position: relative;
+  width: 90%;
+  max-width: 250px;
+  margin: 4em auto;
+  background: #FFF;
+  border-radius: .25em .25em .4em .4em;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.cd-popup-container p {
+  padding: 1.5em 1em;
+}
+.cd-popup-container .cd-buttons:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-popup-container .cd-buttons li {
+  float: left;
+  width: 50%;
+  list-style: none;
+}
+.cd-popup-container .cd-buttons button {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #FFF;
+}
+.cd-popup-container .cd-buttons li:first-child button {
+  background: #fc7169;
+  border-radius: 0 0 0 .25em;
+}
+.cd-popup-container .cd-buttons li:last-child button {
+  background: #b6bece;
+  border-radius: 0 0 .25em 0;
+}
+
+#ybtn, #nbtn {
+  width: 100%;
+  border:none;
+}
+
+
+
+/* Character selection page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#home {
+    font-size: 14px;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #59595a;    
+    padding: 20px;
+}
+
+#main-title{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+section{
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+#usernameLabel {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#usernameInput{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 520px;    
+    padding-bottom: 13px;
+    border-bottom: 2px solid white;    
+    letter-spacing: 3px;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+}
+
+.character-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 270px;    
+    height: 300px;
+    margin: 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px 1fr auto;  
+    border-radius: 18px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.card-image {
+    position: relative;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/texture/yellow.jpg);
+    background-size: cover;
+}
+
+.card-image img {
+    max-width: 95%;
+    max-height: 95%;
+    transition: max-width 0.4s, max-height 0.4s;
+}
+
+.card:hover .card-image img {
+    max-width: 120%;
+    max-height: 120%;
+}
+
+.card {
+    box-shadow: 0 15px 30px -10px #000;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card:nth-child(2) .card-image {
+    background: url(/texture/blue.jpg);
+}
+
+.card:nth-child(3) .card-image {
+    background: url(/texture/purple.jpg);
+}
+
+.card:nth-child(4) .card-image {
+    background: url(/texture/red.jpg);
+}
+
+.card-body {
+    background: #fff;
+    padding: 20px 28px;
+}
+
+.card-body .power {
+    font-weight: bolder;
+}
+
+.card-body h2 {
+    font-size: 1.8em;
+    margin: 4px auto 12px;
+}
+
+.card-body p {
+    color: gray;
+    font-size: 1.1em;
+    line-height: 20px;
+    text-align: center;
+}
+
+.card:nth-child(1) {
+    background: #f6b10f;
+}
+.card:nth-child(2) {
+    background: #4891ba;
+}
+.card:nth-child(3) {
+    background: #864ae6;
+}
+.card:nth-child(4) {
+    background: #be324e;
+}
+
+.card:nth-child(1) .power {
+    color: #f6b10f;
+}
+.card:nth-child(2) .power {
+    color: #4891ba;
+}
+.card:nth-child(3) .power {
+    color: #864ae6;
+}
+.card:nth-child(4) .power {
+    color: #be324e;
+}
+
+.selector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.card:hover .selector {
+    opacity: 1;
+}
+
+.selector input {
+    background-color: #f6b10f;
+    color: #fff;
+    outline: none;
+    border: 2px solid currentColor;
+    cursor: pointer;
+    padding: 12px 20px;
+    transform: translateY(60px);
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+    font-weight: bolder;
+    transition: opacity 0.3s;
+}
+
+.selector input:hover {
+    opacity: 0.8;
+}
+
+.card:nth-child(2) .selector input {    
+    background-color: #4891ba;
+}
+.card:nth-child(3) .selector input {
+    background-color: #864ae6;
+}
+.card:nth-child(4) .selector input {
+    background-color: #be324e;
+}

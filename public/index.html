@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Chat Game</title>
+    <link rel='icon' type='image/png' href='/texture/favicon.png' />
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <ul class="pages">
+        <li class="game page" id="gamepage">
+            <div id="map">
+                <canvas id="canvas" width=800 height=600>
+                </canvas>
+                <button id='disconnectbtn' onclick="disconnectPlayer()">
+                    <img src="./texture/logout.png" width="40" height="40">
+                </button>
+                <div class="chat-container">
+                    <span id="chat-name"></span>
+                    <button id='closebtn' onclick="closeChat()">
+                        <img src="./texture/remove.png" width="16" height="16">
+                    </button>
+                    <ul class="messages" id="messages">
+                    </ul>
+                    <input class="inputMessage" placeholder="Type here..." />
+                </div>
+            </div>
+
+            <div class="cd-popup" role="alert">
+                <div class="cd-popup-container">
+                    <p>Do you want to talk to <span id="name"></span>?</p>
+                    <ul class="cd-buttons">
+                        <li><button id="ybtn" width=100% onclick="yesPressed()">Yes</button></li>
+                        <li><button id="nbtn" width=100% onclick="noPressed()">No</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="chatArea">                
+            </div>
+
+        </li>
+        <li class="login page">
+            <div class="form">
+                <h2 class="title" style="padding-bottom: 10px;" >What's your nickname?</h2>
+                <input class="usernameInput" type="text" maxlength="30" required />
+                <div class="character-container">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="texture/pikachu_user.png" alt="pikachu">
+                        </div>
+                        <div class="card-body">
+                            <span class="power">The Electric One</span>
+                            <br>
+                            <h2>Pikachu</h2>
+                        </div>
+                        <div class="selector">
+                            <input type="submit" value="pikachu" name="pokemon">
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/texture/squirtle_user.png" alt="squirtle">
+                        </div>
+                        <div class="card-body">
+                            <span class="power">The Water One</span>
+                            <br>
+                            <h2>Squirtle</h2>
+                        </div>
+                        <div class="selector">
+                            <input type="submit" value="squirtle" name="pokemon">
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/texture/smogo_user.png" alt="Character">
+                        </div>
+                        <div class="card-body">
+                            <span class="power">The Poisonous One</span>
+                            <br>
+                            <h2>Smogo</h2>
+                        </div>
+                        <div class="selector">
+                            <input type="submit" value="smogo" name="pokemon">
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/texture/pidgeotto_user.png" alt="Character">
+                        </div>
+                        <div class="card-body">
+                            <span class="power">The Flying One</span>
+                            <br>
+                            <h2>Pidgeotto</h2>
+                        </div>
+                        <div class="selector">
+                            <input type="submit" value="pidgeotto" name="pokemon">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/game.js"></script>
+</body>
+
+</html>
